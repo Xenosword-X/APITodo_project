@@ -42,7 +42,6 @@ function signUp(email,nickname,pwd){
     }
   })
   .then(res=>{
-    console.log(res);
     Swal.fire({
         icon: 'success',
         title: '註冊成功',
@@ -104,9 +103,7 @@ function getTodo() {
       });
       renderTodoList(); // 將轉換後的資料渲染出來
     })
-    .catch(error => {
-      console.log(error.response);
-    });
+    .catch(error=>console.log(error.response));
 }
 //新增資料
 function addTodo(todo){
